@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Fondamento', cursive;
+    color: #505962;
+}
+
+.offset:before {
+    display: block;
+    content: "";
+    height: 4rem;
+    margin-top: -4rem;
+}
+
+/*-- Navigation --*/
+nav.bg-dark {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+    background-color: #505962!important;
+    /* background: rgba(0, 0, 0, 0.6)!important; */
+}
+
+.navbar-brand img {
+    height: 1.5rem;
+    margin-left: .9rem;
+}
+
+.navbar-nav li {
+    padding-right: .7rem;
+}
+
+.bg-dark .navbar-nav a.nav-link  {
+    color: white;
+    padding-top: .8rem;
+}
+
+.bg-dark .navbar-nav .nav-link.active,
+.bg-dark .navbar-nav .nav-link:hover {
+    color: #008000!important;
+}
+
+/*-- Landing Page --*/
+.home-inner {
+    background-image: url(./img/photo-of-a-laptop-and-a-tablet-on-the-table-2528118.jpg);
+}
+
+.caption {
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+    color: white;
+    text-transform: uppercase;
+}
+
+.caption h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .4rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+
+.caption h3 {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+}
+
+.caption .btn-lg {
+    border-width: medium;
+    padding: .6rem 1.3rem;
+    font-size: 1.1rem;
+    color: white;
+    text-shadow: .1rem .1rem .3rem black;
+}
+
+.caption .btn-lg:hover {
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+    text-shadow: .1rem .1rem .3rem white;
+}
+
+/*-- Carousel Slider --*/
+.carousel-item {
+    height: 100vh;
+}
+
+/*-- About Section --*/
+.narrow {
+    width: 75%;
+    margin: 1.5rem auto;
+    padding-top: .5rem;
+}
+
+.narrow h1 {
+    font-size: 2.4rem;
+}
+
+.narrow .btn-secondary {
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 1rem;
+    color: white;
+    background-color: #32CD32;
+    border-color: #32CD32;
+}
+
+.narrow .btn-secondary:hover {
+    background-color: #228B22;
+    border-color: #228B22;
+}
+
+/*-- Solutions Section --*/
+.jumbotron {
+    margin-bottom: 0;
+    padding: 2rem 0 3.1rem;
+    border-radius: 0;
+}
+
+h3.heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+}
+
+.heading-underline {
+    width: 3rem;
+    height: .2rem;
+    background-color: #87CEEB;
+    margin: 0 auto 2rem;
+}
+
+.feature svg.svg-inline--fa {
+    color: #87CEEB;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding-bottom: .4rem;
+}
+
+.feature p {
+    font-size: .9rem;
+}
+
+/*-- Team Section --*/
+.padding .card {
+    margin-bottom: 1rem;
+    height: 480px;
+    width: 400px;
+}
+
+.row {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.fixed-background .fixed {
+    background-image: url(./img/join-our-team-wall-decor-3127883.jpg);
+    
+}
+
+.fixed-background .dark {
+    padding: 1.5rem 2rem;
+    background-repeat: no-repeat;
+    background-image: url(./img/close-up-of-hand-over-white-background-316465.jpg);
+    background-size: 100% 100%;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+/*-- Clients Section --*/
+.clients img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.clients .image2 img {
+    width: 100%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+blockquote svg.svg-inline--fa {
+    color: #87CEEB;
+    margin: 1rem;
+}
+
+.clients-hr {
+    border-top: .05rem solid #87CEEB;
+}
+
+.offset .dream-label {
+    background-image: linear-gradient(to right, #b2d235, #0070a7, #00bdf2 15%, #ed1c24);
+}
+
+.dream-label p.heading {
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-shadow: .2rem .2rem .8rem white;
+    color: white;
+    text-transform: uppercase;
+}
+
+/*-- Contact Section --*/
+footer {
+    background-color: #40474e;
+    color: white;
+    padding: 2rem 0 2rem;
+    margin-top: 0;
+    border-top: thin;
+}
+
+footer img {
+    height: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+footer a{
+    color: white;
+}
+
+footer svg.svg-inline--fa {
+    font-size: 1.6rem;
+    margin: 1.2rem .5rem 0 0;
+}
+
+footer svg.svg-inline--fa:hover {
+    color: #87CEEB!important;
+}
+
+hr.socket {
+    width: 100%;
+    border-top: .2rem solid #666b71;
+    margin-top: 3rem;
+}
+
+/*-- Media Queries --*/
+@media (max-width: 767px) {
+    .caption h1 {
+        font-size: 2.3rem;    
+        letter-spacing: .16rem;     
+        padding-bottom: .5rem;
+    }
+    
+    .caption h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    
+    .caption .btn-lg {        
+        padding: .4rem 1rem;
+        font-size: .9rem;
+    }
+    
+    .narrow h1 {
+        font-size: 1.5rem;
+    }
+    
+    .clients img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .clients .image2 img {
+        width: 50%;
+        margin-top: 4rem;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
