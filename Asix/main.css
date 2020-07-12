@@ -248,13 +248,25 @@ h3.heading {
 /*-- Team Section --*/
 .padding .card {
     margin-bottom: 1rem;
-    height: 480px;
+    height: 500px;
     width: 400px;
 }
 
+.card .card-footer {
+    padding-top: 0;
+    padding-bottom: .6rem;
+}
+
+.card a {
+    color: white;
+}
+
+.card svg.svg-inline--fa:hover {
+ color: #87CEEB!important;
+}
+
 .row {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .fixed-background .dark {
@@ -333,7 +345,8 @@ hr.socket {
 }
 
 /*-- Media Queries --*/
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+    /*-- Landing Page --*/
     .caption h1 {
         font-size: 2.3rem;    
         letter-spacing: .16rem;     
@@ -350,23 +363,78 @@ hr.socket {
         font-size: .9rem;
     }
     
+    /*-- About Section --*/
     .narrow h1 {
         font-size: 1.5rem;
     }
     
     .clients img {
         width: 50%;
+        height: 70%;
         display: block;
         margin: 0 auto;
     }
     
     .clients .image2 img {
         width: 50%;
-        margin-top: 4rem;
+        height: 40%;
+        margin-top: 1rem;
         margin-bottom: 0;
         margin-left: auto;
         margin-right: auto;
     }
+
+    /*-- Team Section --*/
+    .padding .card {
+        margin-bottom: .7rem;
+        margin-right: auto;
+        margin-left: auto;
+        height: 530px;
+        width: 300px;
+    }
+
+    .padding .card-1 {
+        margin-bottom: 4rem;
+        margin-right: auto;
+        margin-left: auto;
+        height: 470px;
+        width: 300px;
+    }
+
+    .padding .card img{
+        height: 100%;
+        width: 100%;       
+    }
+
+    .padding .card-1 img{
+        height: 40%;
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+   .card a {
+       color: white;
+   }
+
+   .card svg.svg-inline--fa:hover {
+    color: #87CEEB!important;
+   }
+
+   /*-- Clients Section --*/
+.clients img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.clients .image2 img {
+    width: 100%;
+    height: 70%;
+    border-radius: 50%;
+}
+.clients blockquote svg.svg-inline--fa {
+    color: #87CEEB;
+    margin: 1rem;
+}
 }
 
 @media (max-width: 575px) {
@@ -374,12 +442,20 @@ hr.socket {
         overflow-x: auto;
         font-family: 'Fondamento', cursive;
         color: #505962;
-    }
+    }    
 
-    .padding .card {
-        margin-bottom: 1rem;
-        height: 260px;
-        width: 300px;
+    .clients img {
+        width: 50%;
+        height: 70%;
+        border-radius: 50%;
+        margin-bottom: 0;
+    }
+    
+    .clients .image2 img {
+        width: 50%;
+        height: 60%;
+        border-radius: 50%;
+        margin-bottom: 0;
     }
 }
 

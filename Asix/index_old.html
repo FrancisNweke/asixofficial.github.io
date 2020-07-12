@@ -12,7 +12,7 @@
 
      <!-- Loading css file -->
      <link href="main.css" rel="stylesheet">
-     <link href="./css/slider css/slider.css" rel="stylesheet">
+     <link href="./css/fixed.css" rel="stylesheet">
      
      <!-- Loading bootstrap file -->
      <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -54,49 +54,17 @@
             </div>  <!-- End Navigation Items-->
         </nav> <!-- End Nav Section -->
        
-        <!-- Start Slider -->
-        <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="6000">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselIndicators" data-slide-to="1" ></li>
-                <li data-target="#carouselIndicators" data-slide-to="2" ></li>
-                <li data-target="#carouselIndicators" data-slide-to="3" ></li>
-                <li data-target="#carouselIndicators" data-slide-to="4" ></li>
-            </ol>
-
-            <div class="carousel-inner" role="listbox"> <!-- Start Carousel Inner -->
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(img/photo-of-a-laptop-and-a-tablet-on-the-table-2528118.jpg);">
-                    <div class="caption text-center">
-                        <h1>Welcome to Asix</h1>
-                        <h3>Technology Closer.</h3>
-                        <a class="btn btn-outline-light btn-lg" href="#">Explore</a>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(img/lindsey-.jpg);">
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(img/letter-blocks-247819.jpg);">
-                </div>
-                <!-- Slide 4 -->
-                <div class="carousel-item" style="background-image: url(img/apple-coffee-computer-desk-356056.jpg);">
-                </div>
-                <!-- Slide 5 -->
-                <div class="carousel-item" style="background-image: url(img/3-by-3-rubik-s-cube.jpg);">
-                </div>
-            </div> <!-- End Carousel Inner -->
-            <!-- Previous Icon -->
-            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only" aria-hidden="true">Previous</span>
-            </a>
-            <!-- Next Icon -->
-            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only" aria-hidden="true">Next</span>
-            </a>
-        </div> <!-- End Slider -->       
+        <div class="landing"> <!-- Start Landing Page -->
+            <div class="home-wrap">
+                <div class="home-inner"></div>
+            </div>
+        </div>
+        <div class="caption text-center">
+            <h1>Welcome to Asix</h1>
+            <h3>Technology Closer.</h3>
+            <a class="btn btn-outline-light btn-lg" href="#">Explore</a>
+        </div> <!-- End Landing Page -->
+        
     </div> <!-- End Home Section -->
        
     <div id="about" class="offset text-center"> <!-- Start About Section-->
@@ -104,7 +72,8 @@
             <h1>Asix Limited Advanced Technology</h1>
             <p class="lead">Improving lives with technology for a better world. 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>           
+            </p>
+           
         </div>
         <!-- Neon Button -->
         <a class="btn-neon mx-auto" href="#" target="_blank">
@@ -113,11 +82,11 @@
             <span></span>
             <span></span>
             Experience High Technology
-        </a> 
+        </a>    
     </div> <!-- End About Section -->
 
     <div id="solutions" class="offset"> <!-- Start Solutions Section-->
-        <div class="jumbotron mb-0"> <!-- Start Jumbotron Section-->
+        <div class="row jumbotron mb-0"> <!-- Start Jumbotron Section-->
             <div class="narrow text-center">
                 <div class="col-12">
                     <h3 class="heading">Solutions</h3>
@@ -156,43 +125,70 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- End Jumbotron Section-->
-    </div> <!-- End Solutions Section -->
+        </div> <!-- End Jumbotron Section -->
+    </div> <!-- End Products Section -->
 
-    <div id="team" class="offset"> <!-- Start Team Section-->
-        
-        <div class="fixed-background">
-            <div class="row padding dark text-center"> <!-- Start Row Dark-->
-                <div class="col-12">
-                    <h3 class="heading">Meet The Team</h3>
-                    <div class="heading-underline"></div>
-                </div> <!-- End Team Heading -->
+    <div id="team" class="offset text-center"> <!-- Start Team Section -->
+        <div class="fixed-background">           
+            <div class="padding dark"> <!-- Start Dark Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="heading">Meet The Team</h3>
+                        <div class="heading-underline"></div>
+                    </div> <!-- End Team Heading -->
+                </div>
                 
-                <div class="col-md-3 ml-auto"> <!-- Card 1 -->
-                    <div class="card text-center">
-                        <img class="card-img-top" src="./img/photography-of-a-guy-wearing-green-shirt-1222271.jpg">
-                        <div class="card-body">
-                            <h4 class="card-title">Joseph Ajoru</h4>
-                            <p class="card-text">I have strong knowledge of object-oriented programing, machine learning modelling 
-                                and software development tools using Microsoft C# & .Net Core, C++, Python and SQL.</p>
-                                <cite>&#8212; Co-Founder and CEO of ASIX. </cite>
-                        </div>               
+                <div class="row">
+                    <div class="col-xs-10 col-md-6 col-lg-4 mx-auto"> <!-- Card 1 -->
+                        <div class="card-1">
+                            <div class="card text-center">
+                                <img class="card-img-top" src="./img/photography-of-a-guy-wearing-green-shirt-1222271.jpg">
+                                <div class="card-body">
+                                    <h4 class="card-title">Joseph Ajoru</h4>
+                                    <p class="card-text">I have strong knowledge of object-oriented programing, machine learning modelling 
+                                        and software development tools using Microsoft C# & .Net Core, C++, Python and SQL.</p>
+                                        <cite>&#8212; Co-Founder and CEO of ASIX. </cite>
+                                </div> 
+                                <div class="card-footer bg-secondary d-flex justify-content-around">
+                                    <a href="#">
+                                        <i class="fab fa-facebook fa-1x"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter fa-1x"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin fa-1x"></i>
+                                    </a>
+                                </div>              
+                            </div>
+                        </div>                        
                     </div>
-                </div>
-            
-                <div class="col-md-3 mx-auto"> <!-- Card 2 -->
-                    <div class="card text-center">
-                        <img class="card-img-top" src="./img/photography-of-man-in-white-shirt-with-round-black-analog-697509.jpg" style="height: 280px;">
-                        <div class="card-body">
-                            <h4>Emmanuel Ato</h4>
-                            <p>I have over 15 years of experience in cybersecurity and data analytics combined. 
-                                I'm glad to work with team at ASIX.</p>
-                                <cite>&#8212; Co-Founder of ASIX. </cite>
-                        </div>               
+                
+                    <div class="col-xs-10 col-md-6 col-lg-4 mx-auto"> <!-- Card 2 -->
+                        <div class="card text-center">
+                            <img class="card-img-top" src="./img/photography-of-man-in-white-shirt-with-round-black-analog-697509.jpg" style="height: 280px;">
+                            <div class="card-body">
+                                <h4>Emmanuel Ato</h4>
+                                <p>I have over 15 years of experience in cybersecurity and data analytics combined. 
+                                    I'm glad to work with team at ASIX.</p>
+                                    <cite>&#8212; Co-Founder of ASIX. </cite>
+                            </div>  
+                            <div class="card-footer bg-secondary d-flex justify-content-around">
+                                <a href="#">
+                                    <i class="fab fa-facebook fa-1x"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter fa-1x"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin fa-1x"></i>
+                                </a>
+                            </div>                
+                        </div>
                     </div>
-                </div>
-            </div> <!-- End Row Dark -->
-        </div>       
+                </div>              
+            </div> <!-- End Dark Row -->
+        </div>     <!-- End Fixed Background Section -->
     </div> <!-- End Team Section -->
 
     <div id="clients" class="offset"> <!-- Start Clients Section -->
@@ -202,7 +198,7 @@
                 <div class="heading-underline"></div>
             </div>
 
-            <div class="row"> <!-- Start Clients Review Section -->
+            <div class="row text-center"> <!-- Start Clients Review Section -->
                 <div class="col-md-6 clients">
                     <div class="row">
                         <div class="col-md-4">
