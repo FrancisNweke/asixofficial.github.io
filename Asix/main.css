@@ -459,6 +459,28 @@ hr.socket {
     }
 }
 
+@media (max-width: 767px) {
+    body {
+        overflow-x: auto;
+        font-family: 'Fondamento', cursive;
+        color: #505962;
+    }    
+
+    .clients img {
+        width: 40%;
+        height: 60%;
+        border-radius: 50%;
+        margin-bottom: 0;
+    }
+    
+    .clients .image2 img {
+        width: 40%;
+        height: 50%;
+        border-radius: 50%;
+        margin-bottom: 0;
+    }
+}
+
 /*============ BOOTSTRAP BREAK POINTS:
 
 Extra small (xs) devices (portrait phones, less than 576px)
