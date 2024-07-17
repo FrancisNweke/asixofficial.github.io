@@ -5,20 +5,21 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  /* background-color: rgb(213, 233, 233); */
-  
 }
 
 .bg-img {
   background-image: url("./assets/pexels-maria-tyutina-954599.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  float: left;
-  width: auto;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 html {
@@ -58,7 +59,6 @@ nav {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
@@ -160,7 +160,6 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -193,6 +192,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .section__text p {
@@ -279,6 +279,11 @@ section {
 
 #about {
   position: relative;
+  background: rgba(220, 217, 217, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* This aligns the text in block format */
 }
 
 .about-containers {
@@ -315,6 +320,24 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+}
+
+.details-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-container ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-container ul li i {
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  color: rgb(53, 53, 53);
 }
 
 .section-container {
@@ -375,9 +398,25 @@ article .icon {
   margin-top: 10px;
 }
 
+.experience-details-container.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(220, 217, 217);
+  flex: 1 1 calc(33.333% - 2rem);
+  box-sizing: border-box;
 }
 
 .color-container:hover {
@@ -420,7 +459,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -462,3 +501,15 @@ footer p {
   text-align: center;
 }
 
+/* ANIMATIONS */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
