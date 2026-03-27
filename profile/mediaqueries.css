@@ -1,62 +1,406 @@
-/* MEDIA QUERIES */
+/* ═══════════════════════════════════════════════════════════════
+   MEDIA QUERIES — Mobile-first responsive breakpoints
+   Base styles in style.css cover mobile (<480px)
+   ═══════════════════════════════════════════════════════════════ */
 
-@media (max-width: 768px) {
-    /* Adjustments for smaller screens */
-  
-    nav,
-    .nav-links {
-      display: none;
-    }
-  
-    #hamburger-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 10vh;
-      padding: 0 1rem;
-    }
-  
-    .section-container {
-      flex-direction: column;
-      margin: 0 1rem;
-    }
-  
-    section {
-      padding: 2rem 1rem;
-      margin: 0;
-    }
-  
-    .profile-img,
-    .about-pic,
-    .project-img {
-      width: 100%;
-      height: auto;
-      border-radius: 1rem;
-    }
-  
-    .section__pic-container {
-      width: 100%;
-    }
-  
-    .details-container {
-      margin-bottom: 2rem;
-    }
-  
-    .arrow {
-      right: 1rem;
-    }
-  
-    .experience-details-container,
-    .about-details-container {
-      flex-direction: column;
-    }
-  
-    .experience-details-container.projects {
-      flex-direction: column;
-    }
-  
-    .color-container {
-      flex: 1 1 100%;
-    }
+/* ─── Base overrides for all small screens ─── */
+
+/* Hide desktop nav on mobile */
+.nav-links {
+  display: none;
+}
+
+.nav-resume {
+  display: none;
+}
+
+#hamburger-btn {
+  display: flex;
+}
+
+/* Hero: single column on small screens */
+#hero {
+  grid-template-columns: 1fr;
+  padding: calc(var(--nav-height) + 2.5rem) 1.5rem 4rem;
+  min-height: auto;
+  text-align: center;
+}
+
+.hero-content {
+  align-items: center;
+  order: 2;
+}
+
+.hero-image-wrap {
+  order: 1;
+  margin-bottom: 2rem;
+}
+
+.hero-portrait {
+  width: min(200px, 60vw);
+  height: min(200px, 60vw);
+}
+
+.ring-1 {
+  width: calc(min(200px, 60vw) + 36px);
+  height: calc(min(200px, 60vw) + 36px);
+}
+
+.ring-2 {
+  width: calc(min(200px, 60vw) + 72px);
+  height: calc(min(200px, 60vw) + 72px);
+}
+
+.ring-3 {
+  width: calc(min(200px, 60vw) + 110px);
+  height: calc(min(200px, 60vw) + 110px);
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 12vw, 3.5rem);
+}
+
+.hero-cta {
+  justify-content: center;
+}
+
+.hero-socials {
+  justify-content: center;
+}
+
+/* About: single column */
+.about-grid {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.about-image-wrap {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: left;
+}
+
+/* Skills: single column */
+.skills-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Timeline: reduce left padding */
+.timeline {
+  padding-left: 1.5rem;
+}
+
+.timeline-entry {
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Projects: single column */
+.projects-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Blog: single column */
+.blog-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Contact: single column */
+.contact-grid {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* GitHub stats: 2x2 grid on mobile */
+.github-stats-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Footer: column layout */
+.footer-inner {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Section label hidden on small screens */
+.section-label {
+  display: none;
+}
+
+/* Reduce section padding */
+section {
+  --section-pad: 4rem;
+}
+
+/* ─────────────────────────────────────────────
+   SM: 480px and up
+   ───────────────────────────────────────────── */
+@media (min-width: 480px) {
+
+  .hero-portrait {
+    width: min(240px, 55vw);
+    height: min(240px, 55vw);
   }
-  
+
+  .ring-1 {
+    width: calc(min(240px, 55vw) + 40px);
+    height: calc(min(240px, 55vw) + 40px);
+  }
+
+  .ring-2 {
+    width: calc(min(240px, 55vw) + 80px);
+    height: calc(min(240px, 55vw) + 80px);
+  }
+
+  .ring-3 {
+    width: calc(min(240px, 55vw) + 120px);
+    height: calc(min(240px, 55vw) + 120px);
+  }
+
+  /* 2-column skills on mid-small */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 2-column blog */
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects 2-column */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   MD: 768px and up — tablets
+   ───────────────────────────────────────────── */
+@media (min-width: 768px) {
+
+  /* Show desktop nav, hide hamburger */
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-resume {
+    display: inline-flex;
+  }
+
+  #hamburger-btn {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: none !important;
+  }
+
+  /* Hero: 2-column layout */
+  #hero {
+    grid-template-columns: 1fr 1fr;
+    padding: calc(var(--nav-height) + 3rem) 3rem 3rem;
+    min-height: 100svh;
+    text-align: left;
+  }
+
+  .hero-content {
+    order: 1;
+    align-items: flex-start;
+  }
+
+  .hero-image-wrap {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .hero-portrait {
+    width: min(280px, 38vw);
+    height: min(280px, 38vw);
+  }
+
+  .ring-1 {
+    width: calc(min(280px, 38vw) + 44px);
+    height: calc(min(280px, 38vw) + 44px);
+  }
+
+  .ring-2 {
+    width: calc(min(280px, 38vw) + 88px);
+    height: calc(min(280px, 38vw) + 88px);
+  }
+
+  .ring-3 {
+    width: calc(min(280px, 38vw) + 136px);
+    height: calc(min(280px, 38vw) + 136px);
+  }
+
+  .hero-name {
+    font-size: clamp(2.8rem, 5.5vw, 4rem);
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+  }
+
+  .hero-socials {
+    justify-content: flex-start;
+  }
+
+  /* About: 2-column */
+  .about-grid {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3rem;
+  }
+
+  .about-image-wrap {
+    margin: 0;
+  }
+
+  /* Blog: 3-column */
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Contact: 2-column */
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+  }
+
+  /* GitHub stats: 4-column */
+  .github-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer: row layout */
+  .footer-inner {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  /* Section label visible */
+  .section-label {
+    display: block;
+  }
+
+  /* Restore section padding */
+  section {
+    --section-pad: 6rem;
+  }
+
+  /* Form row */
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   LG: 1024px and up — desktop
+   ───────────────────────────────────────────── */
+@media (min-width: 1024px) {
+
+  #hero {
+    padding: calc(var(--nav-height) + 3rem) 4rem 3rem;
+    gap: 4rem;
+  }
+
+  .hero-portrait {
+    width: min(320px, 30vw);
+    height: min(320px, 30vw);
+  }
+
+  .ring-1 {
+    width: calc(min(320px, 30vw) + 48px);
+    height: calc(min(320px, 30vw) + 48px);
+  }
+
+  .ring-2 {
+    width: calc(min(320px, 30vw) + 96px);
+    height: calc(min(320px, 30vw) + 96px);
+  }
+
+  .ring-3 {
+    width: calc(min(320px, 30vw) + 150px);
+    height: calc(min(320px, 30vw) + 150px);
+  }
+
+  /* Projects: 3-column auto-fill */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .about-grid {
+    gap: 5rem;
+  }
+
+  .contact-grid {
+    gap: 4rem;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   XL: 1280px and up — wide desktop
+   ───────────────────────────────────────────── */
+@media (min-width: 1280px) {
+
+  :root {
+    --section-pad: 7rem;
+  }
+
+  .hero-portrait {
+    width: 340px;
+    height: 340px;
+  }
+
+  .ring-1 {
+    width: 388px;
+    height: 388px;
+  }
+
+  .ring-2 {
+    width: 436px;
+    height: 436px;
+  }
+
+  .ring-3 {
+    width: 490px;
+    height: 490px;
+  }
+
+  #main-nav {
+    padding: 0 3rem;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   Reduced motion — respect user preference
+   ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-up,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+}

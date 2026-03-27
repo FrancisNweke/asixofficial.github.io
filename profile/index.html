@@ -1,267 +1,773 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Francis Nweke</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" href="./assets/page-img3.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Francis Emmanuel Nweke — CS PhD Researcher</title>
+  <meta name="description" content="Francis Emmanuel Nweke — PhD student in Computer Science at Kennesaw State University. Deep learning researcher specializing in behavioral health AI, backend engineer, and aviation enthusiast." />
+  <meta name="keywords" content="Francis Nweke, PhD Computer Science, Deep Learning, Healthcare AI, Machine Learning, Kennesaw State University, KSU, Backend Engineer" />
+  <meta name="author" content="Francis Emmanuel Nweke" />
+  <link rel="canonical" href="https://asixofficial.github.io/profile/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Francis Emmanuel Nweke — CS PhD Researcher" />
+  <meta property="og:description" content="PhD Researcher in CS at KSU. Deep learning for behavioral health AI. Backend engineer. Aviation enthusiast." />
+  <meta property="og:image" content="./nweke.jpg" />
+  <meta property="og:url" content="https://asixofficial.github.io/profile/" />
+  <meta property="og:site_name" content="Francis Emmanuel Nweke" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@Nweke_Franchise" />
+  <meta name="twitter:title" content="Francis Emmanuel Nweke — CS PhD Researcher" />
+  <meta name="twitter:description" content="PhD Researcher in CS at KSU. Deep learning for behavioral health AI. Backend engineer. Aviation enthusiast." />
+  <meta name="twitter:image" content="./assets/nweke.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/page-img3.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Icons: Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+
+  <!-- Google Analytics (TODO: replace GA_MEASUREMENT_ID and uncomment when ready)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
 </head>
-<body class="bg-img">
-    <nav id="desktop-nav">
-        <div class="logo">Francis Nweke</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+<body>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  NAVIGATION                               -->
+  <!-- ══════════════════════════════════════════ -->
+  <header id="site-header">
+    <nav id="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo">FEN<span class="accent">.</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about" data-nav-link>About</a></li>
+        <li><a href="#skills" data-nav-link>Skills</a></li>
+        <li><a href="#experience" data-nav-link>Experience</a></li>
+        <li><a href="#projects" data-nav-link>Projects</a></li>
+        <li><a href="#blog" data-nav-link>Blog</a></li>
+        <li><a href="#contact" data-nav-link>Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <a href="./assets/francis-resume.pdf" class="btn btn-outline nav-resume" target="_blank" rel="noopener" download>
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </a>
+        <button id="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#blog" class="mobile-nav-link">Blog</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li>
+          <a href="./assets/francis-resume.pdf" class="btn btn-outline mobile-resume" target="_blank" rel="noopener" download>
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  HERO                                     -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero — Introduction">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="label-tag">[PhD Researcher]</span> Computer Science &middot; KSU
+      </p>
+      <h1 class="hero-name">
+        Francis<br />Emmanuel<br /><span class="hero-name-accent">Nweke</span>
+      </h1>
+      <p class="hero-tagline">
+        <span id="typewriter-target"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
+      </p>
+      <p class="hero-bio-short">
+        Deep learning and XAI. Backend engineer. Aviation enthusiast.<br />
+        Building explainable intelligent systems.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/FrancisNweke" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/francis-nweke/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/Nweke_Franchise" target="_blank" rel="noopener" aria-label="Twitter / X profile">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://orcid.org/0009-0009-8150-2136" target="_blank" rel="noopener" aria-label="ORCID profile">
+          <i class="fa-brands fa-orcid"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img src="./assets/francis-smile.JPG" alt="Francis Emmanuel Nweke" class="hero-portrait" loading="eager" />
+      <div class="portrait-ring ring-1" aria-hidden="true"></div>
+      <div class="portrait-ring ring-2" aria-hidden="true"></div>
+      <div class="portrait-ring ring-3" aria-hidden="true"></div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  ABOUT  [01]                              -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="about" aria-label="About Me">
+    <div class="section-label" aria-hidden="true">[01]</div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Researcher &middot; Engineer &middot; Curious Mind</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrap reveal-left">
+          <img src="./assets/francis-img.jpeg" alt="Francis Nweke" loading="lazy" />
+          <div class="about-image-frame" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <blockquote class="personal-quote">
+            &ldquo;I enjoy connecting the connections and seeing the big picture.&rdquo;
+          </blockquote>
+
+          <p>
+            I am Francis Emmanuel Nweke, a PhD student in Computer Science at Kennesaw State University.
+            My research focuses on applying deep learning and machine learning to behavioral and mental health data —
+            building annotation tools, automated pipelines, and intelligent systems that can meaningfully support
+            clinical and research workflows.
+          </p>
+          <p>
+            Before academia, I spent several years as a backend and database developer, working extensively with
+            MSSQL, C#, Python, and MongoDB. I bring that engineering discipline into my research.
+          </p>
+          <p>
+            Outside the lab, I follow aviation closely - accident investigation reports, airspace systems,
+            human factors. I also follow soccer (FC Barcelona).
+          </p>
+
+          <div class="currently-learning">
+            <h3 class="cl-title">
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i> Currently Learning
+            </h3>
+            <ul class="cl-tags" role="list">
+              <li>Transformer Architectures</li>
+              <li>Explainable AI (XAI)</li>
+              <li>Human-AI Collaboration</li>
+              <li>Monotonicity in ML</li>
             </ul>
+          </div>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Francis Nweke</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  SKILLS  [02]                             -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="skills" aria-label="Skills and Tech Stack">
+    <div class="section-label" aria-hidden="true">[02]</div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tech Stack</h2>
+        <p class="section-subtitle">Tools I research with and build with</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal-up">
+          <h3 class="skill-group-title">
+            <i class="fa-solid fa-brain" aria-hidden="true"></i> AI / ML Research
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">TensorFlow</span>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Keras</span>
+          </div>
         </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/nweke.jpg" alt="Francis profile picture" class="profile-img"/>
+
+        <div class="skill-group reveal-up" style="--delay: 0.1s">
+          <h3 class="skill-group-title">
+            <i class="fa-solid fa-database" aria-hidden="true"></i> Backend / Databases
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">.NET</span>
+            <span class="skill-pill">MSSQL</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hola, I am</p>
-            <h1 class="title">Francis Emmanuel Nweke</h1>
-            <p class="section__text__p2">PhD student in Computer Science</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/francis-resume.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/in/francis-nweke/'"/>
-                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/FrancisNweke'"/>
-                <img src="./assets/Twitter.jpg" alt="My Twitter profile" class="icon" onclick="location.href='https://twitter.com/Nweke_Franchise'"/>
-            </div>
+
+        <div class="skill-group reveal-up" style="--delay: 0.2s">
+          <h3 class="skill-group-title">
+            <i class="fa-solid fa-wrench" aria-hidden="true"></i> Tools / Infrastructure
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Jupyter</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Docker</span>
+          </div>
         </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/francis-img.jpeg" alt="Profile picture" class="about-pic"/>
+
+        <!-- <div class="skill-group reveal-up" style="--delay: 0.3s">
+          <h3 class="skill-group-title">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i> Web
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">JavaScript</span>
+  
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  EXPERIENCE / TIMELINE  [03]              -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="experience" aria-label="Experience and Education">
+    <div class="section-label" aria-hidden="true">[03]</div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Experience &amp; Education</h2>
+        <p class="section-subtitle">Where I have been building and learning</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-entry reveal-up">
+          <div class="timeline-marker">
+            <span class="timeline-dot work"></span>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 &mdash; Present</span>
+            <div class="timeline-type-badge work">Work</div>
+            <h3 class="timeline-role">Graduate Research Assistant (GRA)</h3>
+            <p class="timeline-org">Kennesaw State University &middot; Computer Science Dept.</p>
+            <ul class="timeline-bullets">
+              <li>Data collection, preprocessing, and design of ML/DL models for behavioral health research</li>
+              <li>Building automated annotation pipelines and intelligent systems (iBHAT)</li>
+              <li>Writing and co-authoring research papers and conference reports</li>
+              <li>Collaborating with clinical and research teams for data-driven insights</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>TensorFlow</span><span>Deep Learning</span><span>Research</span>
             </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                      <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
-                      <h3>Experience</h3>
-                      <ul>
-                        <li><i class="fas fa-check-circle"></i> GRA in Department of Computer Science</li>
-                        <li><i class="fas fa-check-circle"></i> 3+ years Backend and Database Development</li>
-                        <li><i class="fas fa-check-circle"></i> Business Intelligence Development</li>
-                     </ul>
-                     </div>
-                     <div class="details-container">
-                     <img src="./assets/education.png" alt="Education icon" class="icon"/>
-                     <h3>Education</h3>
-                     <ul>
-                        <li><i class="fas fa-check-circle"></i> B.Sc. in Computer Science - 2015 to 2019</li>
-                        <li><i class="fas fa-check-circle"></i> PhD in Computer Science - 2023 to present</li>
-                     </ul>
-                    </div>
-                  </div>
-                <div class="text-container">
-                    <p>My name is Francis Emmanuel Nweke, and I am a PhD student at Kennesaw State University, exploring deep learning and its potential applications in healthcare, particularly behavioral and mental health, under the supervision of Dr. Khan. Prior to starting my PhD, I worked as a software engineer in a software company's Research and Development (R&D) department. There, I got my hands dirty with programming and innovative thinking, which paved the way for my current academic endeavors.
-                        <br><br>
-                        When I am not deciphering complex algorithms or researching the complexities of mental health using AI, you can find me following my interest in aviation. Yes, you read it correctly. I have an unusual liking for documentaries that reveal the intricacies of aviation disastrous events. It's like a detective series, but with more turbulence and black boxes. Also, I have a lifelong curiosity about how the world and its many systems work. From the complexities of global economics to the mechanics of ecosystems, I enjoy connecting the connections and seeing the big picture.
-                        <br><br>
-                        So, whether you enjoy technology, healthcare, aviation secrets, or simply have an unusual curiosity about how something works, feel free to contact me. Let us untangle some.</p>
-                </div>
-            </div>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'"/>
-    </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Graduate Research Assistant (GRA)</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Data collection and preprocessing</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Designing and implementing ML/DL models</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Building system pipelines</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Writing research papers and reports</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Data analysis</h3>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend and Database Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>MSSQL</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>C#</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Python</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>MongoDB</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+
+        <div class="timeline-entry reveal-up" style="--delay: 0.1s">
+          <div class="timeline-marker">
+            <span class="timeline-dot edu"></span>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 &mdash; Present</span>
+            <div class="timeline-type-badge edu">Education</div>
+            <h3 class="timeline-role">PhD, Computer Science</h3>
+            <p class="timeline-org">Kennesaw State University</p>
+            <p class="timeline-note">Research:  Human-AI Collaboration on Explainable AI &middot; Supervisor: Dr. Khan</p>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'"/>
-    </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/machine-learning-in-healthcare.jpg" alt="Project 1" class="project-img img1"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">Intelligent Interactive Behavioral Health Annotation Tool (iBHAT)</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" title="Private Repo" disabled>Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" title="Restricted" disabled>Live Demo</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/francis_site-qr.png" alt="Project 5" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">QR and Bar Codes Generator</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FrancisNweke/CPU-Simulator-GUI'">Github</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/cba.jpg" alt="Project 3" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">Eazybank4</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" title="Private Repo" disabled>Github</button>
-                    </div>
-                </div>
-                <!-- Additional Projects -->
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/tic.png" alt="Project 4" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">Tic Tac Toe</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FrancisNweke/tic-tac-toe'">Github</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/brain-wave.jpg" alt="Project 2" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">Automated Letter Detection from Brain Signals</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" title="Private Repo" disabled>Github</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/cpu.png" alt="Project 6" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">CPU Scheduling Simulator</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FrancisNweke/CPU-Simulator-GUI'">Github</button>
-                    </div>
-                </div>
+
+        <div class="timeline-entry reveal-up" style="--delay: 0.15s">
+          <div class="timeline-marker">
+            <span class="timeline-dot work"></span>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-date">2019 &mdash; 2023</span>
+            <div class="timeline-type-badge work">Work</div>
+            <h3 class="timeline-role">Software Engineer &mdash; R&amp;D</h3>
+            <p class="timeline-org">Backend &amp; Database Development</p>
+            <ul class="timeline-bullets">
+              <li>3+ years of backend and database development across production systems</li>
+              <li>Business Intelligence development and reporting pipelines</li>
+              <li>MSSQL database design, optimization, and C# application layer</li>
+              <li>MongoDB integrations for document-based workloads</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>C#</span><span>MSSQL</span><span>MongoDB</span><span>.NET</span><span>Python</span>
             </div>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'"/>
-    </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
-                <p><a href="mailto:nwekefrancis38@gmail.com">nwekefrancis38@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
-                <p><a href="https://linkedin.com/in/francis-nweke/">LinkedIn</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/orcid.png" alt="ORCID icon" class="icon contact-icon"/>
-                <p><a href="https://orcid.org/0000-0002-1825-0097">ORCID</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/x.png" alt="Twitter icon" class="icon contact-icon"/>
-                <p><a href="https://x.com/Nweke_Franchise">Twitter</a></p>
-            </div>
+
+        <div class="timeline-entry reveal-up" style="--delay: 0.2s">
+          <div class="timeline-marker">
+            <span class="timeline-dot edu"></span>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-date">2015 &mdash; 2019</span>
+            <div class="timeline-type-badge edu">Education</div>
+            <h3 class="timeline-role">B.Sc., Computer Science</h3>
+            <p class="timeline-org">Computer Science</p>
+            <p class="timeline-note">Graduated with a strong foundation in algorithms, data structures, software engineering, and systems design.</p>
+          </div>
         </div>
-    </section>
-    <footer>
-        <p>Copyright &#169; 2023 Francis Emmanuel Nweke. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  PROJECTS  [04]                           -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="projects" aria-label="Projects and Portfolio">
+    <div class="section-label" aria-hidden="true">[04]</div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Research &middot; Software &middot; Tools</p>
+      </div>
+
+      <div class="project-filters" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter-btn" data-filter="software" aria-pressed="false">Software</button>
+        <button class="filter-btn" data-filter="tools" aria-pressed="false">Tools</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <article class="project-card reveal-up" data-category="tools">
+          <div class="project-card-img">
+            <img src="./assets/read report screen.png" alt="iBHAT project" loading="lazy" />
+            <span class="project-badge tools">Tool</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">iBHAT</h3>
+            <p class="project-card-desc">
+              Intelligent Interactive Behavioral Health Annotation Tool — ML-powered system for annotating
+              and analyzing behavioral health research data at scale.
+            </p>
+            <div class="project-card-tech">
+              <span>Python</span><span>ML/DL</span><span>Healthcare AI</span>
+            </div>
+            <div class="project-card-links">
+              <button class="btn btn-ghost btn-sm" disabled>
+                <i class="fa-brands fa-github"></i> Private
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up" data-category="tools" style="--delay: 0.05s">
+          <div class="project-card-img">
+            <img src="./assets/francis_site-qr.png" alt="QR and Bar Codes Generator" loading="lazy" />
+            <span class="project-badge tools">Tool</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">QR &amp; Barcode Generator</h3>
+            <p class="project-card-desc">
+              Web application for generating QR codes and barcodes from user-provided text or URLs,
+              with instant preview and download.
+            </p>
+            <div class="project-card-tech">
+              <span>JavaScript</span><span>HTML/CSS</span><span>QR API</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/FrancisNweke" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up" data-category="software" style="--delay: 0.1s">
+          <div class="project-card-img">
+            <img src="./assets/cba.jpg" alt="Eazybank4 banking application" loading="lazy" />
+            <span class="project-badge software">Software</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Eazybank4</h3>
+            <p class="project-card-desc">
+              Banking application with account management, transaction history, and secure operations
+              built with a robust backend architecture.
+            </p>
+            <div class="project-card-tech">
+              <span>C#</span><span>.NET</span><span>MSSQL</span>
+            </div>
+            <div class="project-card-links">
+              <button class="btn btn-ghost btn-sm" disabled>
+                <i class="fa-brands fa-github"></i> Private
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up" data-category="software" style="--delay: 0.15s">
+          <div class="project-card-img">
+            <img src="./assets/tic.png" alt="Tic Tac Toe game" loading="lazy" />
+            <span class="project-badge software">Software</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Tic Tac Toe</h3>
+            <p class="project-card-desc">
+              Classic Tic Tac Toe game with player vs. player and player vs. AI modes,
+              clean UI, and win detection logic.
+            </p>
+            <div class="project-card-tech">
+              <span>JavaScript</span><span>HTML/CSS</span><span>Game Logic</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/FrancisNweke" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up" data-category="research" style="--delay: 0.2s">
+          <div class="project-card-img">
+            <img src="./assets/brain-wave.jpg" alt="Brain Signal Letter Detection" loading="lazy" />
+            <span class="project-badge research">Research</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Brain Signal Letter Detection</h3>
+            <p class="project-card-desc">
+              Automated detection and classification of letter-based signals from EEG / brain wave data
+              using deep learning models.
+            </p>
+            <div class="project-card-tech">
+              <span>Python</span><span>Deep Learning</span><span>EEG / BCI</span>
+            </div>
+            <div class="project-card-links">
+              <button class="btn btn-ghost btn-sm" disabled>
+                <i class="fa-brands fa-github"></i> Private
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up" data-category="tools" style="--delay: 0.25s">
+          <div class="project-card-img">
+            <img src="./assets/cpu.png" alt="CPU Scheduling Simulator" loading="lazy" />
+            <span class="project-badge tools">Tool</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">CPU Scheduling Simulator</h3>
+            <p class="project-card-desc">
+              Visual simulator for CPU scheduling algorithms — FCFS, SJF, Round Robin, and Priority —
+              with Gantt chart output.
+            </p>
+            <div class="project-card-tech">
+              <span>Python</span><span>Algorithms</span><span>Simulation</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/FrancisNweke" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- GitHub Stats -->
+      <div class="github-stats-panel reveal-up">
+        <h3 class="github-stats-title">
+          <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub Activity
+          <span class="github-username">@FrancisNweke</span>
+        </h3>
+        <div class="github-stats-grid" id="github-stats">
+          <div class="stat-card" id="gh-repos">
+            <span class="stat-number" aria-live="polite">&mdash;</span>
+            <span class="stat-label">Repositories</span>
+          </div>
+          <div class="stat-card" id="gh-stars">
+            <span class="stat-number" aria-live="polite">&mdash;</span>
+            <span class="stat-label">Total Stars</span>
+          </div>
+          <div class="stat-card" id="gh-followers">
+            <span class="stat-number" aria-live="polite">&mdash;</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat-card" id="gh-following">
+            <span class="stat-number" aria-live="polite">&mdash;</span>
+            <span class="stat-label">Following</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  BLOG  [05]                               -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="blog" aria-label="Blog and Writings">
+    <div class="section-label" aria-hidden="true">[05]</div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Writings</h2>
+        <p class="section-subtitle">Thoughts on research, aviation, and beyond</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card reveal-up">
+          <div class="blog-card-meta">
+            <span class="blog-tag research">Research</span>
+            <time datetime="2024-06-01">Jun 2024</time>
+          </div>
+          <h3 class="blog-card-title">Deep Learning for Behavioral Health: Where We Are</h3>
+          <p class="blog-card-excerpt">
+            An overview of how deep learning models and tools are transforming workflows
+            in behavioral health research, and what challenges remain before these tools reach clinical practice&hellip;
+          </p>
+          <button class="blog-read-more" data-post="blog-post-1" aria-expanded="false">
+            Read More <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <article class="blog-card reveal-up" style="--delay: 0.1s">
+          <div class="blog-card-meta">
+            <span class="blog-tag aviation">Aviation</span>
+            <time datetime="2024-03-15">Mar 2024</time>
+          </div>
+          <h3 class="blog-card-title">What Aviation Accidents Teach Us About System Design</h3>
+          <p class="blog-card-excerpt">
+            There is a surprisingly close relationship between how investigators reconstruct black-box data
+            and how data scientists debug model failures. Both fields study systems under pressure&hellip;
+          </p>
+          <button class="blog-read-more" data-post="blog-post-2" aria-expanded="false">
+            Read More <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- <article class="blog-card reveal-up" style="--delay: 0.2s">
+          <div class="blog-card-meta">
+            <span class="blog-tag soccer">Soccer</span>
+            <time datetime="2024-01-10">Jan 2024</time>
+          </div>
+          <h3 class="blog-card-title">The Analytics Revolution in Football: A CS Perspective</h3>
+          <p class="blog-card-excerpt">
+            How machine learning is rewriting how clubs scout, train, and make tactical decisions —
+            and why it matters beyond the pitch for anyone who works with data at scale&hellip;
+          </p>
+          <button class="blog-read-more" data-post="blog-post-3" aria-expanded="false">
+            Read More <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </button>
+        </article> -->
+
+      </div>
+
+      <!-- Full Posts (hidden, expanded by JS) -->
+      <div class="blog-posts-container">
+
+        <article id="blog-post-1" class="blog-full-post" hidden>
+          <div class="blog-full-post-inner">
+            <div class="blog-full-meta">
+              <span class="blog-tag research">Research</span>
+              <time datetime="2024-06-01">June 2024</time>
+            </div>
+            <h2>Deep Learning for Behavioral Health: Where We Are</h2>
+            <p>Behavioral health research has historically relied on manual annotation — clinicians and trained reviewers spending hours labeling video recordings, audio transcripts, and patient interaction logs. It is painstaking, expensive, and difficult to scale. Deep learning offers a path forward, but the journey from laboratory accuracy to clinical trust is longer than most benchmark papers suggest.</p>
+            <p>In my own research at KSU, we are building tools that assist — rather than replace — human annotators. The goal of iBHAT (our Intelligent Interactive Behavioral Health Annotation Tool) is not to automate away judgment, but to make the annotation process faster, more consistent, and less fatiguing. Models surface candidate labels; humans confirm, correct, or override them.</p>
+            <p>The interesting technical challenge is not accuracy on held-out test sets — it is calibration. A model that is 92% accurate but confidently wrong 8% of the time in a clinical setting is potentially more dangerous than a less accurate model that knows what it does not know. Uncertainty quantification in behavioral health annotation is, I believe, the next frontier.</p>
+            <p>There is also the question of generalization. Behavioral health data is collected in wildly different contexts — structured clinical interviews, naturalistic home settings, telehealth calls. A model trained on one distribution fails silently on another. Domain adaptation and federated learning approaches are promising here, though they introduce their own complexity.</p>
+            <button class="blog-post-close btn btn-ghost" data-post="blog-post-1">
+              <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Collapse
+            </button>
+          </div>
+        </article>
+
+        <article id="blog-post-2" class="blog-full-post" hidden>
+          <div class="blog-full-post-inner">
+            <div class="blog-full-meta">
+              <span class="blog-tag aviation">Aviation</span>
+              <time datetime="2024-03-15">March 2024</time>
+            </div>
+            <h2>What Aviation Accidents Teach Us About System Design</h2>
+            <p>I spend a lot of time reading aviation accident investigation reports — NTSB, AAIB, BEA. Not morbidly, but because these documents are some of the finest examples of systematic causal analysis I have encountered. They take a catastrophic failure and work backwards, layer by layer, until they reach not just the proximate cause but the latent conditions that made failure possible.</p>
+            <p>The parallels to software systems are immediate. The concept of "swiss cheese" fault models — where each layer of defense has holes, and accidents occur when holes align — maps cleanly onto distributed systems. A production outage is rarely a single bug; it is a chain of decisions, assumptions, and degraded conditions that stack up at the wrong moment.</p>
+            <p>What aviation does especially well is normalize the acknowledgment of human factors. Pilots are not blamed for following incorrect procedures if the procedures were unclear. Controllers are not blamed for cognitive overload if the system gave them no tools to manage it. This is a maturity that software post-mortems are still working toward — the shift from "who broke it" to "what conditions made it possible to break."</p>
+            <p>The other lesson is the value of the flight data recorder. Persistent, structured, non-deletable logging of system state is not just useful in hindsight — it changes the design of the system. When you know that every decision and state transition will be reviewed, you design more carefully. More software teams should think about their observability tooling in this light.</p>
+            <button class="blog-post-close btn btn-ghost" data-post="blog-post-2">
+              <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Collapse
+            </button>
+          </div>
+        </article>
+
+        <!-- <article id="blog-post-3" class="blog-full-post" hidden>
+          <div class="blog-full-post-inner">
+            <div class="blog-full-meta">
+              <span class="blog-tag soccer">Soccer</span>
+              <time datetime="2024-01-10">January 2024</time>
+            </div>
+            <h2>The Analytics Revolution in Football: A CS Perspective</h2>
+            <p>Expected Goals (xG) has become mainstream. Even broadcast commentary mentions it now. But xG is just the most visible tip of what is a genuinely deep transformation in how football clubs use data. Behind the scenes, clubs with analytical departments are running models that would not look out of place in academic ML research — spatial tracking data, graph neural networks for player positioning, transformer models for sequence prediction of tactical plays.</p>
+            <p>From a computer science perspective, what is interesting about football analytics is the data structure of the problem. A football match is a multi-agent, partially observable, continuous-action system with sparse rewards (goals are rare events). This is an extraordinarily hard RL problem. The statistical approaches that have proliferated — event data models, tracking data, valuation frameworks like VAEP — are clever approximations that sidestep the full complexity.</p>
+            <p>The scouting application is perhaps the most concretely useful. Clubs can now screen thousands of players across dozens of leagues, identify stylistic matches to their tactical system, and shortlist candidates before a human scout watches a single minute of footage. This is pattern matching at scale — exactly the kind of problem deep learning handles well when the training data is rich enough.</p>
+            <p>What I find most fascinating is the feedback loop between analytics and tactics. When enough clubs start optimizing for xG, defensive shapes adapt to minimize high-quality shots. Then the offensive models have to incorporate defender positioning. It is an adversarial game, in the machine learning sense — and like most adversarial games, it rewards whoever can update their model fastest.</p>
+            <button class="blog-post-close btn btn-ghost" data-post="blog-post-3">
+              <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Collapse
+            </button>
+          </div>
+        </article> -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  CONTACT  [06]                            -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="contact" aria-label="Contact">
+    <div class="section-label" aria-hidden="true">[06]</div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Research collaborations, opportunities, or just a hello</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-blurb">
+            Whether you are interested in research collaboration, have an opportunity to discuss,
+            or simply want to connect — my inbox is open.
+          </p>
+          <ul class="contact-channels" role="list">
+            <li>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:nwekefrancis38@gmail.com">nwekefrancis38@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              <a href="https://www.linkedin.com/in/francis-nweke/" target="_blank" rel="noopener">linkedin.com/in/francis-nweke</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <a href="https://github.com/FrancisNweke" target="_blank" rel="noopener">github.com/asixofficial</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-orcid" aria-hidden="true"></i>
+              <a href="https://orcid.org/0009-0009-8150-2136" target="_blank" rel="noopener">ORCID Profile</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TODO: Sign up at formspree.io → New Form → copy your form ID → replace YOUR_FORM_ID below -->
+        <form
+          class="contact-form reveal-right"
+          id="contact-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          novalidate
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Your name" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="_replyto" required placeholder="your@email.com" autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="Research collaboration, opportunity, etc." />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" required placeholder="Tell me about your project or question&#8230;"></textarea>
+          </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+            <span class="btn-text">Send Message</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <p class="form-status" id="form-status" aria-live="polite" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  FOOTER                                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <footer id="site-footer">
+    <div class="footer-inner container">
+      <a href="#hero" class="footer-logo" aria-label="Back to top">FEN<span class="accent">.</span></a>
+      <p class="footer-copy">&copy; 2026 Francis Emmanuel Nweke. Built with HTML, CSS &amp; JS.</p>
+      <div class="footer-socials" aria-label="Social links">
+        <a href="https://github.com/FrancisNweke" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/francis-nweke/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/Nweke_Franchise" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://orcid.org/0009-0009-8150-2136" target="_blank" rel="noopener" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Scroll back to top" title="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Easter Egg: Konami Code ↑↑↓↓←→←→BA -->
+  <div id="easter-egg" aria-hidden="true" hidden>
+    <div class="egg-backdrop"></div>
+    <div class="egg-content">
+      <div class="egg-icon"><i class="fa-solid fa-box-archive"></i></div>
+      <p class="egg-title">Black box unlocked.</p>
+      <p class="egg-text">You think like an investigator.</p>
+      <p class="egg-sub">&#x2191;&#x2191;&#x2193;&#x2193;&#x2190;&#x2192;&#x2190;&#x2192;BA &mdash; nice one.</p>
+      <button id="egg-close" class="btn btn-ghost">Dismiss</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
